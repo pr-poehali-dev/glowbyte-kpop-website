@@ -90,10 +90,6 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
                 </Button>
               </Link>
             </div>
-            <div className="text-sm text-center mt-4 text-sky-600">
-              <p>Для входа используйте:</p>
-              <p>Логин: admin / Пароль: iloveshotar0</p>
-            </div>
           </form>
         </CardContent>
       </Card>
