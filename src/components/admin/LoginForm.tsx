@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,8 +17,8 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
 
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
-    
-    if (username === "admin" && password === "password") {
+
+    if (username === "admin" && password === "iloveshotar0") {
       onLogin(username, password);
       toast({
         title: "Успешный вход",
@@ -37,9 +36,9 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-sky-50">
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
-        <img 
-          src="https://cdn.poehali.dev/files/df8453c8-47df-4f16-9e42-1721ece3808f.jpg" 
-          alt="Stars background" 
+        <img
+          src="https://cdn.poehali.dev/files/df8453c8-47df-4f16-9e42-1721ece3808f.jpg"
+          alt="Stars background"
           className="w-full h-full object-cover"
         />
       </div>
@@ -53,9 +52,9 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="username">Имя пользователя</Label>
-              <Input 
-                id="username" 
-                type="text" 
+              <Input
+                id="username"
+                type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
@@ -65,9 +64,9 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Пароль</Label>
-              <Input 
-                id="password" 
-                type="password" 
+              <Input
+                id="password"
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -76,18 +75,24 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
               />
             </div>
             <div className="pt-2 flex gap-2">
-              <Button type="submit" className="w-full bg-sky-500 hover:bg-sky-600">
+              <Button
+                type="submit"
+                className="w-full bg-sky-500 hover:bg-sky-600"
+              >
                 Войти
               </Button>
               <Link to="/">
-                <Button variant="outline" className="border-sky-200 hover:bg-sky-50">
+                <Button
+                  variant="outline"
+                  className="border-sky-200 hover:bg-sky-50"
+                >
                   Назад
                 </Button>
               </Link>
             </div>
             <div className="text-sm text-center mt-4 text-sky-600">
-              <p>Для демо используйте:</p>
-              <p>Логин: admin / Пароль: password</p>
+              <p>Для входа используйте:</p>
+              <p>Логин: admin / Пароль: iloveshotar0</p>
             </div>
           </form>
         </CardContent>
